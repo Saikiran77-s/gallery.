@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="with=device-width,initial-scale=1.0">
+  <title>photo gallery</title>
+  <link rel="stylesheet" type="text/css" href="gallery.css"> 
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+    <body>
+      <div class="container">
+         <div class="navbar">
+             <img src="logo2.png" class="logo">
+             <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Office</a></li>
+                <li><a href="">Hotels</a></li>
+                <li><a href="">Contact us</a></li>
+            </ul>
+    </nav>
+        <img src="menu.png" class="menu-icon">       
+     </div>
+          
+          <div class="row">
+          <div class="col">
+              <div class="text-box">
+                   <h5>Our Products</h5>
+                  <h1><b>a:negative imageuse</b> positive and <b>effective word</b> statements</h1>
+              </div>
+              </div>
+          <div class="col">
+              <div class="gallery-box">
+              <img src="design.jpg" id="gallery">
+                  
+                  <ul>
+                  <li class="btn">01</li>
+                  <li class="btn active">02 </li>
+                  <li class="btn">03 </li>
+                  <li class="btn">04</li>
+                  <li class="btn">05</li>
+                  </ul>
+              </div>
+              </div>
+             
+          </div>
+        </div>
+        
+        <script type="text/javascript">
+            
+          var btn = document.getElementsByClassName("btn");
+            
+          var gallery = document.getElementById("gallery");
+          
+            
+        for(let i=0; i<btn.length; i++){
+            
+            btn[i].onclick = function(){
+                gallery.src = images[i];
+                let current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace("active","");
+                this.className += "active";
+            };
+        } 
+           
+
+         
+        </script>
+    </body>
+</html>
+ 
